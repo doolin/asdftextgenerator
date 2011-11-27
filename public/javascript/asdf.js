@@ -4,5 +4,9 @@
  */
 
 (function(){
-  // Nothing here yet.
+ //non-jquery self-executing closure...
 })();
+
+$(document).ready(function(){
+  $('h1').addClass('asdf-title');
+});
