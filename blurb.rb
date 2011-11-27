@@ -29,6 +29,10 @@ get 'css/application.css' do
   File.read(File.join('public', 'css/application.css'))
 end
 
+get 'javascript/asdf.js' do
+  content_type 'text/javascript'
+  File.read(File.join('public', 'javascript/asdf.js'))
+end
 
 post '/' do  
   if params[:url] and not params[:url].empty?  
