@@ -6,7 +6,9 @@ GEM
     rack (1.3.5)
     rack-protection (1.1.4)
       rack
+    rb-fsevent (0.4.3.1)
     redis (2.2.2)
+    sass (3.1.10)
     sinatra (1.3.1)
       rack (>= 1.3.4, ~> 1.3)
       rack-protection (>= 1.1.2, ~> 1.1)
@@ -21,6 +23,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  rb-fsevent
   redis
+  sass
   sinatra
   thin
