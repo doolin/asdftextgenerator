@@ -24,6 +24,13 @@ get '/' do
   erb :index  
 end  
 
+get 'css/application.css' do
+  content_type 'text/css'
+  #sass :"stylesheets/screen"
+  File.read(File.join('public', 'css/application.css'))
+end
+
+
 post '/' do  
   if params[:url] and not params[:url].empty?  
     @shortcode = random_string 5  
