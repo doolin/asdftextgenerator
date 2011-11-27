@@ -2,6 +2,11 @@ require 'sinatra'
 require 'redis'  
 require 'erb'
 
+# Do this later after Heroku and caching is
+# figured out.
+#require 'sass/plugin/rack'
+#use Sass::Plugin::Rack
+
 redis = Redis.new  
 
 configure do
