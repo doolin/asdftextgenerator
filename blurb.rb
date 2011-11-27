@@ -3,7 +3,7 @@ require 'redis'
 require 'erb'
 
 # Do this later after Heroku and caching is
-# figured out.
+# figured out. These get added to config.ru
 #require 'sass/plugin/rack'
 #use Sass::Plugin::Rack
 
