@@ -1,6 +1,5 @@
 require 'sinatra'  
 require 'redis'  
-require 'erb'
 
 redis = Redis.new  
 
