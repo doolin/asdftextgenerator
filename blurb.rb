@@ -2,10 +2,9 @@ require 'rubygems'
 require 'sinatra'  
 require 'redis'  
 
-redis = Redis.new  
+# redis = Redis.new  
 
 configure do  
-   require 'redis'
    REDIS = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
 end
 
