@@ -2,11 +2,14 @@ require 'rubygems'
 require 'sinatra'  
 require 'redis'  
 
-redis = Redis.new  
+# redis = Redis.new  
 
-# configure do  
-#    REDIS = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
-# end
+configure do  
+   require 'redis'
+   redisUri = ENV["REDISTOGO_URL"] || 'redis://localhost:6379'
+   uri = URI.parse(redisUri) 
+   redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
+end
 
 # configure do
 #   require 'redis'
