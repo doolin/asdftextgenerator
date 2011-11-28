@@ -4,12 +4,20 @@ require 'redis'
 
 redis = Redis.new  
 
-configure do
-  require 'redis'
-  ENV["REDISTOGO_URL"] ||= "redis://username:password@host:1234/"
-  uri = URI.parse(ENV["REDISTOGO_URL"])
-  REDIS = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
-end
+configure do	
+   require 'redis'
+   uri = URI.parse(ENV["REDISTOGO_URL"])
+   redisUri = ENV["REDISTOGO_URL"] || 'redis://localhost:6379'
+   uri = URI.parse(redisUri) 
+   REDIS = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
+ end
+
+# configure do
+#   require 'redis'
+#   ENV["REDISTOGO_URL"] ||= "redis://username:password@host:1234/"
+#   uri = URI.parse(ENV["REDISTOGO_URL"])
+#   REDIS = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
+# end
 
 helpers do  
   include Rack::Utils  
