@@ -8,7 +8,6 @@ require 'redis'
 #use Sass::Plugin::Rack
 
 redis = Redis.new  
-
 configure do  
    require 'redis'
    redisUri = ENV["REDISTOGO_URL"] || 'redis://localhost:6379'
@@ -50,12 +49,12 @@ end
 post '/' do  
   if params[:url] and not params[:url].empty?  
     @shortcode = random_string 5  
-    redis.setnx "links:#{@shortcode}", params[:url]  
+    REDIS.setnx "links:#{@shortcode}", params[:url]  
   end  
   erb :index  
 end  
 
 get '/:shortcode' do  
-  @url = redis.get "links:#{params[:shortcode]}"  
+  @url = REDIS.get "links:#{params[:shortcode]}"  
   redirect @url || '/'  
 end  
