@@ -2,17 +2,26 @@ GEM
   remote: http://rubygems.org/
   specs:
     daemons (1.1.4)
+    diff-lcs (1.1.3)
     eventmachine (0.12.10)
     rack (1.3.5)
     rack-protection (1.1.4)
       rack
     rb-fsevent (0.4.3.1)
     redis (2.2.2)
+    rspec (2.7.0)
+      rspec-core (~> 2.7.0)
+      rspec-expectations (~> 2.7.0)
+      rspec-mocks (~> 2.7.0)
+    rspec-core (2.7.1)
+    rspec-expectations (2.7.0)
+      diff-lcs (~> 1.1.2)
+    rspec-mocks (2.7.0)
     sass (3.1.10)
     sinatra (1.3.1)
-      rack (>= 1.3.4, ~> 1.3)
-      rack-protection (>= 1.1.2, ~> 1.1)
-      tilt (>= 1.3.3, ~> 1.3)
+      rack (~> 1.3, >= 1.3.4)
+      rack-protection (~> 1.1, >= 1.1.2)
+      tilt (~> 1.3, >= 1.3.3)
     thin (1.3.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -25,6 +34,7 @@ PLATFORMS
 DEPENDENCIES
   rb-fsevent
   redis
+  rspec
   sass
   sinatra
   thin
