@@ -12,7 +12,7 @@ configure do
    require 'redis'
    redisUri = ENV["REDISTOGO_URL"] || 'redis://localhost:6379'
    uri = URI.parse(redisUri) 
-   redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
+   REDIS = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
 end
 
 helpers do  
@@ -32,6 +32,12 @@ get 'css/application.css' do
   content_type 'text/css'
   #sass :"stylesheets/screen"
   File.read(File.join('public', 'css/application.css'))
+end
+
+get 'images/600full-marilyn-monroe.jpg' do
+  content_type 'image/jpeg'
+  #sass :"stylesheets/screen"
+  File.read(File.join('public', 'images/600full-marilyn-monroe.jpg'))
 end
 
 get 'javascript/asdf.js' do
