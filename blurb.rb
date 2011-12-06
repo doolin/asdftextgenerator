@@ -30,16 +30,17 @@ end
 
 post '/' do  
   if params[:url] and not params[:url].empty?  
-    @blurb = random_string 5  
-    REDIS.setnx "links:#{@blurb}", params[:url]  
+    @blurb = params[:url] 
+    @block = @blurb *5
+    redis.setnx "links:#{@block}", params[:url]  
   end  
   erb :index  
 end  
 
 get '/:blurb' do  
-  @url = REDIS.get "links:#{params[:blurb]}"  
+  @url = redis.get "links:#{params[:url]}"  
   redirect @url || '/'  
-end  
+end
 
 get 'css/application.css' do
   content_type 'text/css'
