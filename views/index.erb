@@ -12,13 +12,13 @@
         <h1>Blurb</h1>  
         <form method="post">  
             <input type="text" value="<%= h(params[:url]) %>" name="url" id="url" />  
-            <input type="submit" value="shorten" id="submit" />  
+            <input type="submit" value="Blurb" id="submit" />
         </form>  
         <div class="clear"></div>  
-        <% if @shortcode %>  
+        <% if @block %>  
         <div class="result">  
-            Your shortened URL is:  
-            <a href="http://tada.herokuapp.com/<%= @shortcode %>">http://tada.herokuapp.com/<%= @shortcode %></a>  
+            Here is your generated text:  
+            <a href="/"><%= @block %></a>  
         </div>  
         <% end %>  
     </div>  

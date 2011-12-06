@@ -28,6 +28,20 @@ get '/' do
   erb :index  
 end  
 
+post '/' do  
+  if params[:url] and not params[:url].empty?  
+    @blurb = params[:url] 
+    @block = @blurb *5
+    redis.setnx "links:#{@block}", params[:url]  
+  end  
+  erb :index  
+end  
+
+get '/:blurb' do  
+  @url = redis.get "links:#{params[:url]}"  
+  redirect @url || '/'  
+end
+
 get 'css/application.css' do
   content_type 'text/css'
   #sass :"stylesheets/screen"
@@ -44,16 +58,3 @@ get 'javascript/asdf.js' do
   content_type 'text/javascript'
   File.read(File.join('public', 'javascript/asdf.js'))
 end
-
-post '/' do  
-  if params[:url] and not params[:url].empty?  
-    @shortcode = random_string 5  
-    REDIS.setnx "links:#{@shortcode}", params[:url]  
-  end  
-  erb :index  
-end  
-
-get '/:shortcode' do  
-  @url = REDIS.get "links:#{params[:shortcode]}"  
-  redirect @url || '/'  
-end  
