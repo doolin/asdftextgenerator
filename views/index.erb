@@ -15,10 +15,9 @@
             <input type="submit" value="shorten" id="submit" />  
         </form>  
         <div class="clear"></div>  
-        <% if @shortcode %>  
+        <% if @blurb %>  
         <div class="result">  
-            Your shortened URL is:  
-            <a href="http://tada.herokuapp.com/<%= @shortcode %>">http://tada.herokuapp.com/<%= @shortcode %></a>  
+            Your generated text is:<%= @blurb %>
         </div>  
         <% end %>  
     </div>  
