@@ -31,7 +31,7 @@ end
 post '/' do  
   if params[:url] and not params[:url].empty?  
     @blurb = params[:url] 
-    @block = @blurb *5
+    @block = @blurb * 5 + RandomText.rt
     redis.setnx "links:#{@block}", params[:url]  
   end  
   erb :index  
@@ -57,4 +57,17 @@ end
 get 'javascript/asdf.js' do
   content_type 'text/javascript'
   File.read(File.join('public', 'javascript/asdf.js'))
+end
+
+
+class RandomText
+  def self.rt
+    " hjkl"
+  end
+
+  def self.mt
+    @nl = 5
+    o =  [('a'..'z')].map{|i| i.to_a}.flatten;
+    string  =  (0..@nl-1).map{ o[rand(o.length)]  }.join;
+  end
 end
