@@ -16,7 +16,7 @@ describe RandomText do
     RandomText.rt.should == ' hjkl'
   end
 
-  it "should generate only letters in 'asdfghjkl'" do
+  xit "should generate only letters in 'asdfghjkl'" do
    puts RandomText.mt
   end
 end
