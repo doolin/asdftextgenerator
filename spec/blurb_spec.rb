@@ -30,4 +30,10 @@ describe RandomText do
     lengths.include?(@rt.word.length).should == true
   end
 
+  xit "should generate sentences with lenth between 1 and 15"
+
+  xit "should generate paragraphs with 1 to 6 sentences"
+
+  xit "should generate 1 to 6 paragraphs"
+
 end
