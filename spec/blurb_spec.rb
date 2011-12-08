@@ -20,14 +20,14 @@ describe RandomText do
     RandomText.rt.should == ' hjkl'
   end
 
-  it "should generate a words with length between 1 and 9" do
-    lengths = 1..9
-    lengths.include?(@rt.word.length).should == true
-  end
-
   it "should generate a letter on the asdf row" do
     letters = %w{a s d f g h j k l}
     letters.include?(@rt.letter).should == true
+  end
+
+  it "should generate a words with length between 1 and 9" do
+    lengths = 1..9
+    lengths.include?(@rt.word.length).should == true
   end
 
 end
