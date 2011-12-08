@@ -1,3 +1,4 @@
 .project
 .rvmrc
 .sass-cache
+*.rdb

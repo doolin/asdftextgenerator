@@ -61,6 +61,25 @@ end
 
 
 class RandomText
+
+  def initialize
+    @prng = Random.new()
+  end
+
+  def letter
+    letters = %w{a s d f g h j k l}
+    letters[@prng.rand(0..8)]
+  end
+
+  def word
+    length = @prng.rand(1..9)
+    word = ''
+    length.times do
+      word += letter
+    end
+    word
+  end
+
   def self.rt
     " hjkl"
   end
