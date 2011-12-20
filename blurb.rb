@@ -80,6 +80,15 @@ class RandomText
     word
   end
 
+  def sentence
+    length = @prng.rand(1..15)
+    sentence = ''
+    length.times do
+      sentence += word
+    end
+    sentence
+  end
+
   def self.rt
     " hjkl"
   end
