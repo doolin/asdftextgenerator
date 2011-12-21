@@ -29,9 +29,11 @@ get '/' do
 end  
 
 post '/' do  
+  @random = RandomText.new()
   if params[:url] and not params[:url].empty?  
     @blurb = params[:url] 
-    @block = @blurb * 5 + RandomText.rt
+    @block = RandomText.mt * 5
+    # @block = @blurb * 5 + RandomText.rt
     redis.setnx "links:#{@block}", params[:url]  
   end  
   erb :index  
@@ -85,6 +87,15 @@ class RandomText
       word += letter
     end
     word
+  end
+
+  def sentence
+    length = @prng.rand(1..15)
+    sentence = ''
+    length.times do
+      sentence += word
+    end
+    sentence
   end
 
   def self.rt
