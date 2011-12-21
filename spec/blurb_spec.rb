@@ -30,12 +30,20 @@ describe RandomText do
     lengths.include?(@rt.word.length).should == true
   end
 
-  xit "should generate sentences with length between 1 and 15" do
-    lengths = 1..15
+  it "should should repeat 5 words of 5 random characters" do
+    sentence = RandomText.rt * 5
+    sentence.length.should == 25
+  end
+
+  it "should generate sentences with length between 1 and 75" do
+    lengths = 1..75
     lengths.include?(@rt.sentence.length).should == true
   end
 
-  xit "should generate paragraphs with 1 to 6 sentences"
+  it "should generate paragraphs with 1 to 6 sentences" do
+    lengths = 1..450
+    lengths.include?(@rt.paragraph.length).should == true
+  end
 
   xit "should generate 1 to 6 paragraphs"
 
