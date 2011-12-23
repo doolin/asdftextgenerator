@@ -8,6 +8,30 @@ describe "Sinatra App" do
     last_response.body.should match(/Blurb/)
   end
 
+  # Missing Capybara matcher methods.
+  xit "should respond to POST with random text" do
+    post '/'
+    fill_in :url, :with => "foo"
+    click_button :submit
+    last_response.body.should match(/aa/)
+  end
+
+end
+
+describe "Redis" do
+
+  before do
+    @redis = Redis.new
+    # @rt = @redis.sentx "links:#{params[:url]}"  
+  end
+
+  it "should return Redis object" do
+    @redis.should_not == nil
+  end
+
+  xit "should return stored record" do
+    @redis.get("links:#{params[:url]}").should == @rt
+  end 
 end
 
 describe RandomText do
