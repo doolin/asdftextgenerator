@@ -35,6 +35,7 @@ post '/' do
     @block = @random.sentence  
     redis.setnx "links:#{@block}", params[:url]  
   end
+  erb :index
 end  
 
 get '/:blurb' do  

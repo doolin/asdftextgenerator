@@ -22,13 +22,13 @@ describe "Redis" do
 
   before do
     @redis = Redis.new
-    # @rt = @redis.sentx "links:#{params[:url]}"  
   end
 
   it "should return Redis object" do
     @redis.should_not == nil
   end
 
+  # Missing correct method on Redis object.
   xit "should return stored record" do
     @redis.get("links:#{params[:url]}").should == @rt
   end 
