@@ -13,12 +13,12 @@
         <h1>Blurb</h1>  
         <form method="post">  
             <input type="text" value="<%= h(params[:url]) %>" name="url" id="url" />  
-            <input type="submit" value="Blurb" id="submit" />
+            <input type="submit" value="Repeat" id="submit" />
         </form>  
         <div class="clear"></div>  
         <% if @block %>  
         <div class="result">  
-            Here is your generated text:  
+            Generated text:  
             <a href="/"><%= @block %></a>  
         </div>  
         <% end %>  

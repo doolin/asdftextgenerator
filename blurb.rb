@@ -19,9 +19,9 @@ helpers do
   include Rack::Utils  
   alias_method :h, :escape_html  
 
-  def random_string(length)  
-    rand(36**length).to_s(36)  
-  end  
+  # def random_string(length)  
+  #   rand(36**length).to_s(36)  
+  # end  
 end  
 
 get '/' do  
@@ -32,11 +32,10 @@ post '/' do
   @random = RandomText.new()
   if params[:url] and not params[:url].empty?  
     @blurb = params[:url] 
-    @block = RandomText.mt * 5
-    # @block = @blurb * 5 + RandomText.rt
+    @block = @random.sentence  
     redis.setnx "links:#{@block}", params[:url]  
-  end  
-  erb :index  
+  end
+  erb :index
 end  
 
 get '/:blurb' do  
@@ -67,5 +66,4 @@ get 'javascript/asdf.js' do
   content_type 'text/javascript'
   #File.read(File.join('public', 'javascript/asdf.js'))
 end
-
 
