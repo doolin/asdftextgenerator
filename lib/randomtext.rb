@@ -33,7 +33,7 @@ class RandomText
     sent_count = @prng.rand(1..5)
     paragraph = ''
     sent_count.times do
-      paragraph += sentence + ' /n'
+      paragraph += sentence 
     end
     paragraph
   end
@@ -42,7 +42,7 @@ class RandomText
     prgh_count = @prng.rand(1..5)
     passage = ''
     prgh_count.times do
-      passage += paragraph + ' /n'
+      passage += paragraph 
     end
     passage
   end
