@@ -20,12 +20,13 @@ class RandomText
   end
 
   def sentence
-    word_count = @prng.rand(1..10)
-    sentence = ''
-    word_count.times do
-      sentence += word + ' '
+    length = @prng.rand(0..14)
+    # length = @prng.rand(1..15)
+    sentence = word.capitalize
+    length.times do
+      sentence += ' ' + word
     end
-    sentence
+    sentence + '.'
   end
 
   def paragraph
