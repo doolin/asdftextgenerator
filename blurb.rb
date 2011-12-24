@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra'  
 require 'redis'  
+require './lib/randomtext'
 
 # Do this later after Heroku and caching is
 # figured out. These get added to config.ru
