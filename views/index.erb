@@ -15,12 +15,44 @@
             <input type="text" value="<%= h(params[:url]) %>" name="url" id="url" />  
             <input type="submit" value="Repeat" id="submit" />
         </form>
-        <div class="clear"></div>  
+        <div class="clear"></div>
         <% if @block %>
         <div class="result">  
             Generated text:
             <a href="/"><%= @block %></a>  
         </div>  
         <% end %>  
-    </div>  
-</body>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="span7">
+        <h1>Generate ASDF</h1>
+        <form method="post">
+            <input type="text" value="<%= h(params[:url]) %>" name="url" id="url" />
+            <input type="submit" value="Repeat" id="submit" class="btn danger"/>
+        </form>
+        </div>
+        <div class="span7 result">
+          <p>
+            Next div. More text. Blah.
+          Next div. More text. Blah.
+          Next div. More text. Blah.
+          Next div. More text. Blah.
+          Next div. More text. Blah.
+          Next div. More text. Blah.
+          Next div. More text. Blah.
+          Next div. More text. Blah.
+          Next div. More text. Blah.
+          Next div. More text. Blah.
+          Next div. More text. Blah.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="doolin">
+      <span class="shamrock">&#9752;</span> <a href="http://dool.in/" title="My routing page.">dool.in</a>
+    </div>
+
+  </body>
+</html>
