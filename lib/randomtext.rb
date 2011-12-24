@@ -20,13 +20,13 @@ class RandomText
   end
 
   def sentence
-    length = @prng.rand(1..15)
+    length = @prng.rand(0..14)
     # length = @prng.rand(1..15)
-    sentence = ''
+    sentence = word.capitalize
     length.times do
-      sentence += word
+      sentence += ' ' + word
     end
-    sentence
+    sentence + '.'
   end
 
   def self.rt
