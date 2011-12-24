@@ -50,7 +50,7 @@ describe RandomText do
   end
 
   it "should generate sentences with length between 1 and 15 words" do
-    words = 1..15
+    words = 1..135
     words.include?(@rt.sentence.length).should == true
   end
 

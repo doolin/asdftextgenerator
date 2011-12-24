@@ -20,14 +20,16 @@ class RandomText
   end
 
   def sentence
-    length = @prng.rand(1..15)
+    word_count = @prng.rand(1..15)
     # length = @prng.rand(1..15)
     sentence = ''
-    length.times do
-      sentence += word
+    word_count.times do
+      sentence += word + ' '
     end
     sentence
   end
+
+
 
   def self.rt
     " hjkl"
