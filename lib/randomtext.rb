@@ -21,6 +21,7 @@ class RandomText
 
   def sentence
     length = @prng.rand(1..15)
+    # length = @prng.rand(1..15)
     sentence = ''
     length.times do
       sentence += word

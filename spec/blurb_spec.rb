@@ -8,14 +8,6 @@ describe "Sinatra App" do
     last_response.body.should match(/Blurb/)
   end
 
-  # Missing Capybara matcher methods.
-  xit "should respond to POST with random text" do
-    post '/'
-    fill_in :url, :with => "foo"
-    click_button :submit
-    last_response.body.should match(/aa/)
-  end
-
 end
 
 describe "Redis" do
@@ -29,9 +21,12 @@ describe "Redis" do
   end
 
   # Missing correct method on Redis object.
-  xit "should return stored record" do
-    @redis.get("links:#{params[:url]}").should == @rt
+  it "should return stored value" do
+    @redis.set "foo", "bar"
+    response = @redis.get "foo"
+    response.should == "bar"
   end 
+
 end
 
 describe RandomText do
@@ -54,14 +49,9 @@ describe RandomText do
     lengths.include?(@rt.word.length).should == true
   end
 
-  it "should should repeat 5 words of 5 random characters" do
-    sentence = RandomText.rt * 5
-    sentence.length.should == 25
-  end
-
-  it "should generate sentences with length between 1 and 75 characters" do
-    lengths = 1..75
-    lengths.include?(@rt.sentence.length).should == true
+  it "should generate sentences with length between 1 and 15 words" do
+    words = 1..15
+    words.include?(@rt.sentence.length).should == true
   end
 
   xit "should generate paragraphs with 1 to 6 sentences" do
