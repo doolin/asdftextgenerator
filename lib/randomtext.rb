@@ -11,7 +11,7 @@ class RandomText
   end
 
   def word
-    length = @prng.rand(1..9)
+    length = @prng.rand(1..10)
     word = ''
     length.times do
       word += letter
@@ -20,8 +20,7 @@ class RandomText
   end
 
   def sentence
-    word_count = @prng.rand(1..15)
-    # length = @prng.rand(1..15)
+    word_count = @prng.rand(1..10)
     sentence = ''
     word_count.times do
       sentence += word + ' '
@@ -29,7 +28,23 @@ class RandomText
     sentence
   end
 
+  def paragraph
+    sent_count = @prng.rand(1..5)
+    paragraph = ''
+    sent_count.times do
+      paragraph += sentence + ' /n'
+    end
+    paragraph
+  end
 
+  def passage
+    prgh_count = @prng.rand(1..5)
+    passage = ''
+    prgh_count.times do
+      passage += paragraph + ' /n'
+    end
+    passage
+  end
 
   def self.rt
     " hjkl"

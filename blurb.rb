@@ -29,7 +29,7 @@ post '/' do
   @random = RandomText.new()
   if params[:url] and not params[:url].empty?  
     @blurb = params[:url] 
-    @block = @random.sentence  
+    @block = @random.passage
     redis.setnx "links:#{@block}", params[:url]  
   end
   erb :index

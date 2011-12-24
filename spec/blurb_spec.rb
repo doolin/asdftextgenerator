@@ -44,21 +44,23 @@ describe RandomText do
     letters.include?(@rt.letter).should == true
   end
 
-  it "should generate a word with length between 1 and 9" do
-    lengths = 1..9
+  it "should generate a word with length between 1 and 10" do
+    lengths = 1..10
     lengths.include?(@rt.word.length).should == true
   end
 
-  it "should generate sentences with length between 1 and 15 words" do
-    words = 1..135
-    words.include?(@rt.sentence.length).should == true
+  it "should generate sentences with length between 1 and 10 words" do
+    length = 1..100
+    length.include?(@rt.sentence.length).should == true
   end
 
-  xit "should generate paragraphs with 1 to 6 sentences" do
-    lengths = 1..450
-    lengths.include?(@rt.paragraph.length).should == true
+  it "should generate paragraphs with 1 to 6 sentences" do
+    length = 1..500
+    length.include?(@rt.paragraph.length).should == true
   end
 
-  xit "should generate 1 to 6 paragraphs"
-
+  it "should generate 1 to 6 paragraphs" do
+    length = 1..2500
+    length.include?(@rt.passage.length).should == true
+  end
 end
