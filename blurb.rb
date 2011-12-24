@@ -47,11 +47,13 @@ get 'stylesheets/bootstrap.css' do
 end
 =end
 
+=begin
 get 'css/application.css' do
   content_type 'text/css'
   #sass :"stylesheets/screen"
   #File.read(File.join('public', 'css/application.css'))
 end
+=end
 
 get 'images/600full-marilyn-monroe.jpg' do
   content_type 'image/jpeg'
