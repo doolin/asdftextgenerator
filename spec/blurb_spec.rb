@@ -5,29 +5,29 @@ describe "Sinatra App" do
   it "should respond to GET" do
     get '/'
     last_response.should be_ok
-    last_response.body.should match(/Blurb/)
+    last_response.body.should match(/Generate ASDF/)
   end
 
 end
 
-describe "Redis" do
+# describe "Redis" do
 
-  before do
-    @redis = Redis.new
-  end
+#   before do
+#     @redis = Redis.new
+#   end
 
-  it "should return Redis object" do
-    @redis.should_not == nil
-  end
+#   it "should return Redis object" do
+#     @redis.should_not == nil
+#   end
 
-  # Missing correct method on Redis object.
-  it "should return stored value" do
-    @redis.set "foo", "bar"
-    response = @redis.get "foo"
-    response.should == "bar"
-  end 
+#   # Missing correct method on Redis object.
+#   it "should return stored value" do
+#     @redis.set "foo", "bar"
+#     response = @redis.get "foo"
+#     response.should == "bar"
+#   end 
 
-end
+# end
 
 describe RandomText do
   
