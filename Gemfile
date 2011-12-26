@@ -6,6 +6,7 @@ gem 'sass'
 gem 'rb-fsevent'
 
 group :test do
-  gem 'rspec-rails'
-  gem 'rack-test'
+  gem 'rspec'
+  gem 'rack-test', :require => 'rack/test'
+  gem 'capybara'
 end

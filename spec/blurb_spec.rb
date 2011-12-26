@@ -8,11 +8,13 @@ describe "Sinatra App" do
     last_response.body.should match(/Blurb/)
   end
 
-  it "should respond with multiple buttons" do
-    render '/'
-    rendered.should =~ /Random/
-    # get '/'
-    # last_response.should have_tag "input"
+end
+
+describe "Homepage", :type => :request do
+
+  it "should visit homepage" do
+    visit '/'
+    # last_response.should have_content "Random"
   end
 
 end
