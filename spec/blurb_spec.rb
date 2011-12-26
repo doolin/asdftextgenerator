@@ -10,12 +10,15 @@ describe "Sinatra App" do
 
 end
 
-describe "Homepage", :type => :request do
+describe "Requests", :type => :request do
 
-  it "should visit homepage" do
+  it "should generate random text" do
     visit '/'
-    # last_response.should have_content "Random"
+    click_button 'submit'
+    page.has_content? "Generated text"
   end
+
+  
 
 end
 
