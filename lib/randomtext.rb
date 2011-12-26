@@ -20,8 +20,7 @@ class RandomText
   end
 
   def sentence
-    length = @prng.rand(0..14)
-    # length = @prng.rand(1..15)
+    length = @prng.rand(1..10)
     sentence = word.capitalize
     length.times do
       sentence += ' ' + word
@@ -30,7 +29,7 @@ class RandomText
   end
 
   def paragraph
-    sent_count = @prng.rand(0..4)
+    sent_count = @prng.rand(1..5)
     paragraph = '<p>' + sentence
     sent_count.times do
       paragraph += ' ' + sentence 

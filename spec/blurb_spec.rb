@@ -8,6 +8,13 @@ describe "Sinatra App" do
     last_response.body.should match(/Blurb/)
   end
 
+  it "should respond with multiple buttons" do
+    render '/'
+    rendered.should =~ /Random/
+    # get '/'
+    # last_response.should have_tag "input"
+  end
+
 end
 
 describe "Redis" do
@@ -20,7 +27,6 @@ describe "Redis" do
     @redis.should_not == nil
   end
 
-  # Missing correct method on Redis object.
   it "should return stored value" do
     @redis.set "foo", "bar"
     response = @redis.get "foo"
@@ -63,4 +69,5 @@ describe RandomText do
     length = 1..2500
     length.include?(@rt.passage.length).should == true
   end
+
 end
