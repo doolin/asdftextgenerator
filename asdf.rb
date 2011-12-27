@@ -14,13 +14,18 @@ end
 
 get '/' do
   @random = RandomText.new()
-  @block = @random.passage
-  erb :index  
+  @block = @random.latin_passage
+  erb :index
 end
 
-get '/:latin' do
-  @latin = @random.latin_passage
-  redirect @@latin || '/'
+get '/:name' do
+=begin
+  if params[:name] == 'lorem'
+    @block = @random.latin_passage
+  end
+=end
+  @block = @random.latin_passage
+  erb :index
 end
 
 =begin

@@ -49,9 +49,12 @@ class RandomText
   def latin_words
     latin_words = %w{ Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis }
     latin_words[@prng.rand(0..24)]
+    #puts "latin words"
+    #puts latin_words
   end
 
   def latin_passage
+    #puts "Here"
     word_count = @prng.rand(10..25)
     latin_passage = ''
     word_count.times do

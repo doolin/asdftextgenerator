@@ -20,7 +20,7 @@ describe "Requests", :type => :request do
 
   it "should generate latin with button click" do
     visit '/'
-    click_button 'Latin'
+    click_button 'Lorem'
     page.has_content? "Generated text"
   end
 end
@@ -60,7 +60,7 @@ describe RandomText do
     length.include?(@rt.passage.length).should == true
   end
 
-  it "generates random Latin" do
+  it "generates random Lorem" do
     length = 1..625
     length.include?(@rt.latin_passage.length).should == true
   end
