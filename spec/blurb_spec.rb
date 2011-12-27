@@ -20,25 +20,6 @@ describe "Requests", :type => :request do
 
 end
 
-# describe "Redis" do
-
-#   before do
-#     @redis = Redis.new
-#   end
-
-#   it "should return Redis object" do
-#     @redis.should_not == nil
-#   end
-
-#   # Missing correct method on Redis object.
-#   it "should return stored value" do
-#     @redis.set "foo", "bar"
-#     response = @redis.get "foo"
-#     response.should == "bar"
-#   end 
-
-# end
-
 describe RandomText do
   
   before do

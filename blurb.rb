@@ -22,10 +22,6 @@ post '/' do
   erb :index
 end  
 
-# get '/:blurb' do  
-#   redirect @url || '/'  
-# end
-
 =begin
 get 'stylesheets/bootstrap.css' do
   #content_type 'text/css'
