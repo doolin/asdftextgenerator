@@ -57,7 +57,7 @@ class RandomText
     length = @prng.rand(5..10)
     lorem_sentence = word.capitalize
     length.times do
-      lorem_sentence += ' ' + word
+      lorem_sentence += ' ' + lorem_words
     end
     lorem_sentence + '.'
   end
