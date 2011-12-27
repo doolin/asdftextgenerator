@@ -23,7 +23,6 @@ get '/:latin' do
   erb :index
 end
 
-
 =begin
 get 'stylesheets/bootstrap.css' do
   #content_type 'text/css'

@@ -12,12 +12,17 @@ end
 
 describe "Requests", :type => :request do
 
-  it "should generate random text" do
+  it "should generate asdf text with button click" do
     visit '/'
     click_button 'submit'
     page.has_content? "Generated text"
   end
 
+  it "should generate latin with button click" do
+    visit '/'
+    click_button 'Latin'
+    page.has_content? "Generated text"
+  end
 end
 
 describe RandomText do
@@ -56,7 +61,7 @@ describe RandomText do
   end
 
   it "generates random Latin" do
-    length = 1..500
+    length = 1..625
     length.include?(@rt.latin_passage.length).should == true
   end
 end
