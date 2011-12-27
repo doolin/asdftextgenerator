@@ -57,6 +57,6 @@ describe RandomText do
 
   it "generates random Latin" do
     length = 1..500
-    length.include?(@rt.latin.length).should == true
+    length.include?(@rt.latin_passage.length).should == true
   end
 end
