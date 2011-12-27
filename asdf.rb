@@ -12,15 +12,17 @@ helpers do
   alias_method :h, :escape_html  
 end  
 
-get '/' do  
+get '/' do
+  @random = RandomText.new()
+  @block = @random.passage
   erb :index  
-end  
+end
 
-post '/' do  
+post '/' do
   @random = RandomText.new()
   @block = @random.passage
   erb :index
-end  
+end
 
 =begin
 get 'stylesheets/bootstrap.css' do
