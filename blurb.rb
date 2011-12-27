@@ -1,20 +1,11 @@
 require 'rubygems'
 require 'sinatra'  
-# require 'redis'  
 require './lib/randomtext'
 
 # Do this later after Heroku and caching is
 # figured out. These get added to config.ru
 #require 'sass/plugin/rack'
 #use Sass::Plugin::Rack
-
-# redis = Redis.new  
-# configure do  
-#    require 'redis'
-#    redisUri = ENV["REDISTOGO_URL"] || 'redis://localhost:6379'
-#    uri = URI.parse(redisUri) 
-#    REDIS = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
-# end
 
 helpers do  
   include Rack::Utils  
@@ -27,18 +18,13 @@ end
 
 post '/' do  
   @random = RandomText.new()
-  # if params[:url] and not params[:url].empty?  
-  #   @blurb = params[:url] 
   @block = @random.passage
-  #   redis.setnx "links:#{@block}", params[:url]  
-  # end
   erb :index
 end  
 
-get '/:blurb' do  
-  # @url = redis.get "links:#{params[:url]}"  
-  redirect @url || '/'  
-end
+# get '/:blurb' do  
+#   redirect @url || '/'  
+# end
 
 =begin
 get 'stylesheets/bootstrap.css' do
