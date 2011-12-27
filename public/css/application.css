@@ -49,6 +49,20 @@ body {
   font-weight: 400;
 }
 
+form {
+  margin-bottom: 0px;
+}
+
+form > ul {
+  text-align: center;
+  list-style-type: none;
+  margin-bottom: 0px;
+}
+
+.chooser li {
+  display: inline;
+}
+
 /*
 form {
   display:block;
