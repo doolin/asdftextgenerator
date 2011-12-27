@@ -5,12 +5,16 @@ require File.join(File.dirname(__FILE__), '..', 'blurb.rb')
 
 require 'sinatra'
 require 'rack/test'
+require 'capybara/rspec'
+require 'capybara/dsl'
 
 # setup test environment
 set :environment, :test
 set :run, false
 set :raise_errors, true
 set :logging, false
+
+Capybara.app = Sinatra::Application
 
 def app
   Sinatra::Application

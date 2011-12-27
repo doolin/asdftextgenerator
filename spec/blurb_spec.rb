@@ -10,6 +10,16 @@ describe "Sinatra App" do
 
 end
 
+describe "Requests", :type => :request do
+
+  it "should generate random text" do
+    visit '/'
+    click_button 'submit'
+    page.has_content? "Generated text"
+  end
+
+end
+
 # describe "Redis" do
 
 #   before do
