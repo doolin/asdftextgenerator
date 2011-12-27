@@ -18,20 +18,11 @@ get '/' do
   erb :index  
 end
 
-<<<<<<< HEAD
 get '/:latin' do
   @latin = @random.latin_passage
   erb :index
 end
 
-post '/' do  
-=======
-post '/' do
->>>>>>> 2bf551422965d78094e2e6e86edbdbdc603d5610
-  @random = RandomText.new()
-  @block = @random.passage
-  erb :index
-end
 
 =begin
 get 'stylesheets/bootstrap.css' do
