@@ -46,6 +46,7 @@ class RandomText
     passage
   end
 
+#=begin
   def lorem_words
     lorem_words = %w{ Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis }
     lorem_words[@prng.rand(0..24)]
@@ -55,7 +56,7 @@ class RandomText
 
   def lorem_sentence
     length = @prng.rand(5..10)
-    lorem_sentence = word.capitalize
+    lorem_sentence = lorem_words.capitalize
     length.times do
       lorem_sentence += ' ' + lorem_words
     end
@@ -64,7 +65,7 @@ class RandomText
 
   def lorem_paragraph
     sent_count = @prng.rand(1..5)
-    lorem_paragraph = '<p>' + sentence
+    lorem_paragraph = '<p>' + lorem_sentence
     sent_count.times do
       lorem_paragraph += ' ' + lorem_sentence 
     end
@@ -78,7 +79,9 @@ class RandomText
       lorem_passage += lorem_paragraph 
     end
     lorem_passage
+    #puts lorem_passage
   end
+#=end
 
   def self.rt
     " hjkl"
