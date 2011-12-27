@@ -16,6 +16,11 @@ get '/' do
   erb :index  
 end  
 
+get '/:latin' do
+  @latin = @random.latin_passage
+  erb :index
+end
+
 post '/' do  
   @random = RandomText.new()
   @block = @random.passage
