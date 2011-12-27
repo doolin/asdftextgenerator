@@ -28,14 +28,14 @@ end
 post '/' do  
   @random = RandomText.new()
   # if params[:url] and not params[:url].empty?  
-  #   @blurb = params[:url] 
+  #   @asdf = params[:url] 
   @block = @random.passage
   #   redis.setnx "links:#{@block}", params[:url]  
   # end
   erb :index
 end  
 
-get '/:blurb' do  
+get '/:asdf' do  
   # @url = redis.get "links:#{params[:url]}"  
   redirect @url || '/'  
 end

@@ -1,7 +1,7 @@
 require 'simplecov'
 SimpleCov.start
 
-require File.join(File.dirname(__FILE__), '..', 'blurb.rb')
+require File.join(File.dirname(__FILE__), '..', 'asdf.rb')
 
 require 'sinatra'
 require 'rack/test'
