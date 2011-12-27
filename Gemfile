@@ -6,7 +6,7 @@ gem 'sass'
 gem 'rb-fsevent'
 gem 'thin'
 gem 'foreman'
-gem 'simplecov'
+gem 'simplecov', :require => false, :group => :test
 
 group :test do
   gem 'rspec'
