@@ -14,7 +14,7 @@ end
 
 get '/' do
   @random = RandomText.new()
-  @block = @random.latin_passage
+  @block = @random.lorem_passage
   erb :index
 end
 
@@ -24,7 +24,7 @@ get '/:name' do
     @block = @random.latin_passage
   end
 =end
-  @block = @random.latin_passage
+  @block = @random.lorem_passage
   erb :index
 end
 
