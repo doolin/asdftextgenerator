@@ -26,9 +26,6 @@ body {
   padding-top: 1%;
 }
 
-
-
-
 /**
  * bootstrap-based
  */
@@ -48,11 +45,37 @@ body {
   font-size:60px;
   padding-bottom:8px;
   border-bottom:2px solid #ff4b33;
-font-family: bistro-script-web,cursive;
-font-style: normal;
-font-weight: 400;
+  font-family: bistro-script-web,cursive;
+  font-style: normal;
+  font-weight: 400;
 }
 
+form {
+  margin-bottom: 0px;
+}
+form > ul {
+  text-align: center;
+  list-style-type: none;
+  margin-bottom: 0px;
+}
+
+.chooser li {
+    display: inline;
+}
+
+/*
+form {
+  display:block;
+  width:400px;
+}
+
+input {
+  display:block;
+  float:left;
+  padding:8px;
+  font-size:16px;
+}
+*/
 
 .result {
   margin-top:12px;
@@ -104,17 +127,6 @@ h1 {
   border-bottom:2px solid #ff4b33;
 }
 
-form {
-  display:block;
-  width:400px;
-}
-
-input {
-  display:block;
-  float:left;
-  padding:8px;
-  font-size:16px;
-}
 
 #url {
   width:280px;

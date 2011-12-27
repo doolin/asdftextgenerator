@@ -23,12 +23,6 @@ get '/:latin' do
   redirect @@latin || '/'
 end
 
-post '/' do
-  @random = RandomText.new()
-  @block = @random.passage
-  erb :index
-end
-
 =begin
 get 'stylesheets/bootstrap.css' do
   #content_type 'text/css'
