@@ -8,22 +8,35 @@ describe "Sinatra App" do
     last_response.body.should match(/Generate ASDF/)
   end
 
+  xit "should respond to GET/?type=ASDF" do
+    get '/?type=ASDF'
+    last_response.should be_ok
+    last_response.body.should match(/ASDF-FOO/)
+  end
+
+  xit "should respond to GET/?type=Lorem" do
+    get '/?type=Lorem'
+    last_response.should be_ok
+    last_response.body.should match(/IPSUM/)
+  end
+
 end
 
 describe "Requests", :type => :request do
 
-  it "should generate asdf text with button click" do
+  xit "should generate asdf text with button click" do
     visit '/'
-    click_button 'submit'
-    page.has_content? "Generated text"
+    click_button 'ASDF'
+    page.has_text?('ASDF-FOO')
   end
 
-  it "should generate latin with button click" do
+  xit "should generate latin with button click" do
     visit '/'
     click_button 'Lorem'
-    page.has_content? "Generated text"
+    page.has_content "Lorem"
   end
 end
+
 
 describe RandomText do
   
@@ -40,28 +53,46 @@ describe RandomText do
     letters.include?(@rt.letter).should == true
   end
 
-  it "should generate a word with length between 1 and 10" do
+  it "should generate word with 1-10 characters" do
     lengths = 1..10
     lengths.include?(@rt.word.length).should == true
   end
 
-  it "should generate sentences with length between 1 and 10 words" do
+  it "should generate sentence with 1-10 words" do
     length = 1..100
     length.include?(@rt.sentence.length).should == true
   end
 
-  it "should generate paragraphs with 1 to 6 sentences" do
+  it "should generate paragraph with 1-5 sentences" do
     length = 1..500
     length.include?(@rt.paragraph.length).should == true
   end
 
-  it "should generate 1 to 6 paragraphs" do
+  it "should generate passage with 1-6 paragraphs" do
     length = 1..2500
     length.include?(@rt.passage.length).should == true
   end
 
-  it "generates random Lorem" do
-    length = 1..625
-    length.include?(@rt.latin_passage.length).should == true
+  xit "should generate lorem word with 1-10 characters" do
+    lengths = 1..10
+    lengths.include?(@rt.lorem_words.length).should == true
   end
+
+  xit "should gemerate lorem sentence with 1-10 words" do
+    length = 1..100
+    length.include?(@rt.lorem_sentence.length).should == true
+  end
+
+  xit "should generate lorem paragraph with 1-5 sentences" do
+    length = 1..500
+    #length.include?(@rt.lorem_paragraph.length).should == true
+    puts @rt.lorem_paragraph
+  end
+
+  xit "should generate lorem passage with 1-6 paragraphs" do
+    length = 1..625
+    #length.include?(@rt.lorem_passage.length).should == true
+    puts @rt.lorem_passage
+  end
+
 end

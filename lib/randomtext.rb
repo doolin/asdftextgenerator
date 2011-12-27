@@ -46,22 +46,42 @@ class RandomText
     passage
   end
 
-  def latin_words
-    latin_words = %w{ Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis }
-    latin_words[@prng.rand(0..24)]
-    #puts "latin words"
-    #puts latin_words
+#=begin
+  def lorem_words
+    lorem_words = %w{ Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis }
+    lorem_words[@prng.rand(0..24)]
+    #puts "lorem words"
+    #puts lorem_words
   end
 
-  def latin_passage
-    #puts "Here"
-    word_count = @prng.rand(10..25)
-    latin_passage = ''
-    word_count.times do
-      latin_passage += latin_words
+  def lorem_sentence
+    length = @prng.rand(5..10)
+    lorem_sentence = lorem_words.capitalize
+    length.times do
+      lorem_sentence += ' ' + lorem_words
     end
-    latin_passage
+    lorem_sentence + '.'
   end
+
+  def lorem_paragraph
+    sent_count = @prng.rand(1..5)
+    lorem_paragraph = '<p>' + lorem_sentence
+    sent_count.times do
+      lorem_paragraph += ' ' + lorem_sentence 
+    end
+    lorem_paragraph + '</p>'
+  end
+
+  def lorem_passage
+    prgh_count = @prng.rand(1..5)
+    lorem_passage = ''
+    prgh_count.times do
+      lorem_passage += lorem_paragraph 
+    end
+    lorem_passage
+    #puts lorem_passage
+  end
+#=end
 
   def self.rt
     " hjkl"
