@@ -1,3 +1,3 @@
-require "./blurb"
+require "./asdf"
 
 run Sinatra::Application
