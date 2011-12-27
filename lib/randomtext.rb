@@ -20,8 +20,7 @@ class RandomText
   end
 
   def sentence
-    length = @prng.rand(0..14)
-    # length = @prng.rand(1..15)
+    length = @prng.rand(5..10)
     sentence = word.capitalize
     length.times do
       sentence += ' ' + word
@@ -30,7 +29,7 @@ class RandomText
   end
 
   def paragraph
-    sent_count = @prng.rand(0..4)
+    sent_count = @prng.rand(1..5)
     paragraph = '<p>' + sentence
     sent_count.times do
       paragraph += ' ' + sentence 
@@ -45,6 +44,20 @@ class RandomText
       passage += paragraph 
     end
     passage
+  end
+
+  def latin_words
+    latin_words = %w{ Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis }
+    latin_words[@prng.rand(0..24)]
+  end
+
+  def latin_passage
+    word_count = @prng.rand(10..25)
+    latin_passage = ''
+    word_count.times do
+      latin_passage += latin_words
+    end
+    latin_passage
   end
 
   def self.rt
