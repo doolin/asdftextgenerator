@@ -20,7 +20,7 @@ end
 
 get '/:latin' do
   @latin = @random.latin_passage
-  erb :index
+  redirect @@latin || '/'
 end
 
 post '/' do
