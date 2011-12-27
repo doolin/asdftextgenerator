@@ -14,17 +14,14 @@ end
 
 get '/' do
   @random = RandomText.new()
-  @block = @random.latin_passage
-  erb :index
-end
-
-get '/:name' do
-=begin
-  if params[:name] == 'lorem'
+  if params[:type] == 'Lorem'
     @block = @random.latin_passage
+  elsif params[:type] == 'ASDF'
+    @block = @random.passage
+  else
+    @block = @random.passage
   end
-=end
-  @block = @random.latin_passage
+  #@block = "Hello #{params[:type]}!"
   erb :index
 end
 
