@@ -111,8 +111,9 @@ section {
 }
 audio, canvas, video {
   display: inline-block;
-  *display: inline;
+/*  *display: inline;
   *zoom: 1;
+*/
 }
 audio:not([controls]) {
   display: none;
@@ -140,11 +141,15 @@ textarea {
   font-size: 100%;
   margin: 0;
   vertical-align: baseline;
+  /*
   *vertical-align: middle;
+  */
 }
 button, input {
   line-height: normal;
+  /*
   *overflow: visible;
+  */
 }
 button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
