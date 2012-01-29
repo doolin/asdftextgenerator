@@ -38,21 +38,23 @@
             <li><input type="submit" value="Lorem" name="type" id="submit-lorem" class="btn danger"/></li>
           </ul>
         </form>
-
-<ul class="cf social_links">
+        </div>
+          
+<div class="span7 social-links">
+<ul class="cf social-links">
   <li id="twitter">
-    <a href="http://twitter.com/home?status=Check%20out%20the%20Portfolio%20Project%20-%20<%= request.url%>" >
-      <%= image_tag('twitter.png', :alt => 'Share this on twitter', :title => 'Share this on twitter') %>
+    <a href="http://twitter.com/home?status=Check%20out%20the%20ASDF%20Text%20Generator%20-%20<%= request.url%>" >
+      <img src='images/twitter.png' alt='Share this on twitter' title='Share this on twitter' />
     </a>
   </li>
   <li id="facebook">
-    <a href="http://www.facebook.com/sharer.php?u=<%= request.url %>&amp;t=PortfolioProject" target="blank">
-      <%= image_tag('facebook.png', :alt => "Share this on facebook", :title => "Share this on facebook") %>
+    <a href="http://www.facebook.com/sharer.php?u=<%= request.url %>&amp;t=ASDF Text Generator" target="blank">
+      <img src='images/facebook.png' alt='Share this on Facebook' title='Share this on Facebook' />
     </a>
   </li>
   <li id="linkedin">
-    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<%= request.url %>&amp;title=Check%20out%20Portfolio-Project.com&amp;source=<%= request.url%>">
-      <%= image_tag('linkedin.png', :alt => "Share this on linkedin", :title => "Share this on linkedin") %>
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<%= request.url %>&amp;title=Check%20out%20ASDF Text Generator&amp;source=<%= request.url%>">
+      <img src='images/linkedin.png' alt='Share this on LinkedIn' title='Share this on LinkedIn' />
     </a>
   </li>
   <li id="gplus">
@@ -60,9 +62,8 @@
     <div class="g-plusone" data-size="small" data-count="false"></div>
   </li>
 </ul>
-
-
-        </div>
+</div>
+          
         <div id="result" class="span7 result">
           <%= @block %>
         </div>
