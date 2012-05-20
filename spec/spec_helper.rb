@@ -24,4 +24,8 @@ RSpec.configure do |config|
   config.include Rack::Test::Methods
   #config.mock_with :rspec
   #config.fixture_path = "#{::Rails.root}/spec/fixtures"
+
+  def app
+  	Sinatra::Application
+  end
 end

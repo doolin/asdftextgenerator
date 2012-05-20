@@ -20,7 +20,8 @@ class RandomText
   end
 
   def sentence
-    length = @prng.rand(5..10)
+    #length = @prng.rand(5..10)
+    length = @prng.rand(1..10)
     sentence = word.capitalize
     length.times do
       sentence += ' ' + word
