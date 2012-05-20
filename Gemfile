@@ -12,4 +12,6 @@ group :test do
   gem 'rspec'
   gem 'rack-test'
   gem 'capybara'
+  gem 'rest-assured'
+  gem 'rspec-http'
 end
