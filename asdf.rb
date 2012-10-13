@@ -26,6 +26,20 @@ get '/' do
   erb :index
 end
 
+post '/' do
+  @random = RandomText.new()
+
+  if params[:type] == 'Lorem'
+    @block = @random.lorem_passage
+  elsif params[:type] == 'ASDF'
+    @block = @random.passage
+  else
+    @block = @random.passage
+  end
+
+  erb :index
+end
+
 get 'images/600full-marilyn-monroe.jpg' do
   content_type 'image/jpeg'
 end
