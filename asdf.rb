@@ -16,16 +16,16 @@ end
 get '/' do
   @random = RandomText.new()
 
+  content_type :json
   if params[:type] == 'Lorem'
-    @block = @random.lorem_passage
+    { 'lorem' => @random.lorem_passage }.to_json
   elsif params[:type] == 'ASDF'
-    @block = @random.passage
+    { 'asdf' => @random.lorem_passage }.to_json
   else
-    @block = @random.passage
+    { 'asdf' => @random.lorem_passage }.to_json
   end
-
-  erb :index
 end
+
 
 post '/' do
   @random = RandomText.new()
