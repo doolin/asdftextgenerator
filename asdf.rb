@@ -14,7 +14,7 @@ end
 
 get '/' do
   @random = RandomText.new()
-#=begin
+
   if params[:type] == 'Lorem'
     @block = @random.lorem_passage
   elsif params[:type] == 'ASDF'
@@ -22,8 +22,7 @@ get '/' do
   else
     @block = @random.passage
   end
-#=end
-  #@block = @random.passage
+
   erb :index
 end
 
