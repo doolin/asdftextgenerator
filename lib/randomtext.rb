@@ -33,7 +33,7 @@ class RandomText
     sent_count = @prng.rand(1..5)
     paragraph = '<p>' + sentence
     sent_count.times do
-      paragraph += ' ' + sentence 
+      paragraph += ' ' + sentence
     end
     paragraph + '</p>'
   end
@@ -42,7 +42,7 @@ class RandomText
     prgh_count = @prng.rand(1..5)
     passage = ''
     prgh_count.times do
-      passage += paragraph 
+      passage += paragraph
     end
     passage
   end
@@ -68,7 +68,7 @@ class RandomText
     sent_count = @prng.rand(1..5)
     lorem_paragraph = '<p>' + lorem_sentence
     sent_count.times do
-      lorem_paragraph += ' ' + lorem_sentence 
+      lorem_paragraph += ' ' + lorem_sentence
     end
     lorem_paragraph + '</p>'
   end
@@ -77,7 +77,7 @@ class RandomText
     prgh_count = @prng.rand(1..5)
     lorem_passage = ''
     prgh_count.times do
-      lorem_passage += lorem_paragraph 
+      lorem_passage += lorem_paragraph
     end
     lorem_passage
     #puts lorem_passage
