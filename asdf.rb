@@ -1,5 +1,6 @@
 require 'rubygems'
-require 'sinatra'  
+require 'sinatra'
+require 'json'
 require './lib/randomtext'
 
 # Do this later after Heroku and caching is
