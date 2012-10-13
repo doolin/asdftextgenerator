@@ -7,10 +7,10 @@ require './lib/randomtext'
 #require 'sass/plugin/rack'
 #use Sass::Plugin::Rack
 
-helpers do  
-  include Rack::Utils  
-  alias_method :h, :escape_html  
-end  
+helpers do
+  include Rack::Utils
+  alias_method :h, :escape_html
+end
 
 get '/' do
   @random = RandomText.new()
