@@ -39,7 +39,7 @@ end
 
 
 describe RandomText do
-  
+
   before do
     @rt = RandomText.new
   end
@@ -73,26 +73,24 @@ describe RandomText do
     length.include?(@rt.passage.length).should == true
   end
 
-  xit "should generate lorem word with 1-10 characters" do
+  it "should generate lorem word with 4-10 characters" do
     lengths = 1..10
     lengths.include?(@rt.lorem_words.length).should == true
   end
 
-  xit "should gemerate lorem sentence with 1-10 words" do
+  it "should gemerate lorem sentence with 2-10 words" do
     length = 1..100
     length.include?(@rt.lorem_sentence.length).should == true
   end
 
-  xit "should generate lorem paragraph with 1-5 sentences" do
-    length = 1..500
-    #length.include?(@rt.lorem_paragraph.length).should == true
-    puts @rt.lorem_paragraph
+  it "should generate lorem paragraph with 2-5 sentences" do
+    length = 1..600
+    length.include?(@rt.lorem_paragraph.length).should == true
   end
 
-  xit "should generate lorem passage with 1-6 paragraphs" do
+  it "should generate lorem passage with 1-6 paragraphs" do
     length = 1..625
-    #length.include?(@rt.lorem_passage.length).should == true
-    puts @rt.lorem_passage
+    length.include?(@rt.lorem_passage.length).should == true
   end
 
 end
