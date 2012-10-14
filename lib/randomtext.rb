@@ -47,7 +47,6 @@ class RandomText
     passage
   end
 
-#=begin
   def lorem_words
     lorem_words = %w{ Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis }
     lorem_words[@prng.rand(0..24)]
@@ -82,7 +81,6 @@ class RandomText
     lorem_passage
     #puts lorem_passage
   end
-#=end
 
   def self.rt
     " hjkl"
