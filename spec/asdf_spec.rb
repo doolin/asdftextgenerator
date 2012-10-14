@@ -85,7 +85,7 @@ describe RandomText do
   end
 
   it "should generate lorem paragraph with 2-5 sentences" do
-    length = 1..600
+    length = 1..601
     length.include?(@rt.lorem_paragraph.length).should == true
   end
 
