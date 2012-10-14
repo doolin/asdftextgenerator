@@ -8,32 +8,33 @@ describe "Sinatra App" do
     last_response.body.should match(/Generate ASDF/)
   end
 
-  xit "should respond to GET/?type=ASDF" do
+  it "should respond to GET/?type=ASDF" do
     get '/?type=ASDF'
     last_response.should be_ok
-    last_response.body.should match(/ASDF-FOO/)
+    last_response.body.should match(/{\"asdf\":*/)
   end
 
-  xit "should respond to GET/?type=Lorem" do
+  it "should respond to GET/?type=Lorem" do
     get '/?type=Lorem'
     last_response.should be_ok
-    last_response.body.should match(/IPSUM/)
+    last_response.body.should match(/{\"lorem\":*/)
   end
 
 end
 
 describe "Requests", :type => :request do
 
-  xit "should generate asdf text with button click" do
+  it "should generate asdf text with button click" do
     visit '/'
     click_button 'ASDF'
-    page.has_text?('ASDF-FOO')
+    #page.has_text?('ASDF-FOO')
+    page.has_content? 'ASDF'
   end
 
-  xit "should generate latin with button click" do
+  it "should generate latin with button click" do
     visit '/'
     click_button 'Lorem'
-    page.has_content "Lorem"
+    page.has_content? "Lorem"
   end
 end
 
@@ -73,7 +74,7 @@ describe RandomText do
     length.include?(@rt.passage.length).should == true
   end
 
-  it "should generate lorem word with 4-10 characters" do
+  it "should generate lorem word with 1-10 characters" do
     lengths = 1..10
     lengths.include?(@rt.lorem_words.length).should == true
   end
@@ -89,7 +90,7 @@ describe RandomText do
   end
 
   it "should generate lorem passage with 1-6 paragraphs" do
-    length = 1..625
+    length = 1..926
     length.include?(@rt.lorem_passage.length).should == true
   end
 
