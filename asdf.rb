@@ -22,7 +22,9 @@ get '/' do
   elsif params[:type] == 'ASDF'
     { 'asdf' => @random.lorem_passage }.to_json
   else
-    { 'asdf' => @random.lorem_passage }.to_json
+    content_type :html
+    @block = @random.passage
+    erb :index
   end
 end
 
