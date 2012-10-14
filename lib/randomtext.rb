@@ -30,8 +30,8 @@ class RandomText
   end
 
   def paragraph
+    paragraph = '<p>'
     sent_count = @prng.rand(1..5)
-    paragraph = '<p>' + sentence
     sent_count.times do
       paragraph += ' ' + sentence
     end
