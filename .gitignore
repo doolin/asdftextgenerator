@@ -1,6 +1,7 @@
-coverage
-coverage/*
 .project
 .rvmrc
+.gemrc
 .sass-cache
+coverage
+coverage/*
 *.rdb

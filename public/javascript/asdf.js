@@ -9,8 +9,13 @@
 
 $(document).ready(function(){
   $('h1').addClass('asdf-title');
-  
-  //$('#result').popover('show')
+
+  $('.result-text').hide();
+  console.log("Fading in #result...");
+  $('.result-text').fadeIn(2000, function() {
+    console.log("Fading in .result-text...");
+  });
+
 });
 
 (function() {

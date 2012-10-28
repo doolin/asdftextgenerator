@@ -30,7 +30,7 @@ class RandomText
   end
 
   def paragraph
-    paragraph = '<p>'
+    paragraph = '<p class="result-text">'
     sent_count = @prng.rand(1..5)
     sent_count.times do
       paragraph += ' ' + sentence
@@ -65,7 +65,7 @@ class RandomText
 
   def lorem_paragraph
     sent_count = @prng.rand(1..5)
-    lorem_paragraph = '<p>' + lorem_sentence
+    lorem_paragraph = '<p class="result-text">' + lorem_sentence
     sent_count.times do
       lorem_paragraph += ' ' + lorem_sentence
     end
