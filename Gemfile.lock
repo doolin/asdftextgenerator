@@ -46,6 +46,7 @@ GEM
       rack
     rack-test (0.6.1)
       rack (>= 1.0)
+    rake (0.8.7)
     rb-fsevent (0.9.1)
     rest-assured (1.1.9)
       activerecord (~> 3.2.0)
@@ -100,6 +101,7 @@ DEPENDENCIES
   capybara
   foreman
   rack-test
+  rake
   rb-fsevent
   rest-assured
   rspec
