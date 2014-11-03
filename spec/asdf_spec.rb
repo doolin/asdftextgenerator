@@ -20,6 +20,8 @@ describe "Sinatra App" do
     last_response.body.should match(/{\"lorem\":*/)
   end
 
+  it "responds to GET /lorem"
+  it "responds to GET /asdf"
 end
 
 describe "Requests", :type => :request do
@@ -40,7 +42,6 @@ end
 
 
 describe RandomText do
-
   before do
     @rt = RandomText.new
   end
@@ -94,5 +95,4 @@ describe RandomText do
     length = 1..926
     length.include?(@rt.lorem_passage.length).should == true
   end
-
 end

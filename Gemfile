@@ -11,7 +11,7 @@ gem 'foreman'
 gem 'simplecov', :require => false, :group => :test
 
 group :test do
-  gem 'rspec'
+  gem 'rspec', '2.99'
   gem 'capybara'
   gem 'rest-assured'
   gem 'rspec-http'
