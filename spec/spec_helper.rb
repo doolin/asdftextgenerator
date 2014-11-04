@@ -24,7 +24,7 @@ RSpec.configure do |config|
   config.include Rack::Test::Methods
   # config.mock_with :rspec
   # config.fixture_path = "#{::Rails.root}/spec/fixtures"
-  # config.raise_errors_for_deprecations!
+  config.raise_errors_for_deprecations!
 
   config.include Capybara::DSL, type: :request
 
