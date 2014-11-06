@@ -46,6 +46,7 @@ class RandomText
     end
     passage
   end
+  alias_method :asdf_passage, :passage
 
   def lorem_words
     lorem_words = %w{ Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis }

@@ -13,6 +13,16 @@ helpers do
   alias_method :h, :escape_html
 end
 
+get '/lorem' do
+  @random = RandomText.new()
+  { 'lorem' => @random.lorem_passage }.to_json
+end
+
+get '/asdf' do
+  @random = RandomText.new()
+  { 'asdf' => @random.asdf_passage }.to_json
+end
+
 get '/' do
   @random = RandomText.new()
 

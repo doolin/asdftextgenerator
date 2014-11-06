@@ -20,8 +20,17 @@ describe "Sinatra App" do
     expect(last_response.body).to match(/{\"lorem\":*/)
   end
 
-  it "responds to GET /lorem"
-  it "responds to GET /asdf"
+  it "responds to GET /lorem" do
+    get '/lorem'
+    expect(last_response).to be_ok
+    expect(last_response.body).to match(/{\"lorem\":*/)
+  end
+
+  it "responds to GET /asdf" do
+    get '/asdf'
+    expect(last_response).to be_ok
+    expect(last_response.body).to match(/{\"asdf\":*/)
+  end
 end
 
 describe "Requests", :type => :request do
