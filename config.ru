@@ -1,3 +1,3 @@
-require "./asdf"
+require './asdf'
 
 run Sinatra::Application

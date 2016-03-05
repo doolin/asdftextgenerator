@@ -84,7 +84,7 @@ class RandomText
   end
 
   def self.rt
-    " hjkl"
+    ' hjkl'
   end
 
   def self.mt
