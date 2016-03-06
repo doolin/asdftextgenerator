@@ -60,4 +60,3 @@ end
 get 'javascript/asdf.js' do
   content_type 'text/javascript'
 end
-

@@ -127,13 +127,6 @@ Style/SpaceBeforeBlockBraces:
 Style/SpaceInsideBlockBraces:
   Enabled: false
 
-# Offense count: 21
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, ConsistentQuotesInMultiline.
-# SupportedStyles: single_quotes, double_quotes
-Style/StringLiterals:
-  Enabled: True
-
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: IgnoredMethods.
@@ -141,11 +134,3 @@ Style/StringLiterals:
 Style/SymbolProc:
   Exclude:
     - 'lib/randomtext.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: final_newline, final_blank_line
-Style/TrailingBlankLines:
-  Exclude:
-    - 'asdf.rb'
