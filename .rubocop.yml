@@ -126,11 +126,3 @@ Style/SpaceBeforeBlockBraces:
 # SupportedStyles: space, no_space
 Style/SpaceInsideBlockBraces:
   Enabled: false
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: IgnoredMethods.
-# IgnoredMethods: respond_to
-Style/SymbolProc:
-  Exclude:
-    - 'lib/randomtext.rb'

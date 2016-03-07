@@ -89,7 +89,7 @@ class RandomText
 
   def self.mt
     @nl = 5
-    o =  [('a'..'z')].map{|i| i.to_a}.flatten;
+    o =  [('a'..'z')].map(&:to_a).flatten;
     string  =  (0..@nl-1).map{ o[rand(o.length)]  }.join;
   end
 end
