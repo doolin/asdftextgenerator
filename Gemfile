@@ -2,11 +2,13 @@ source 'https://rubygems.org'
 
 gem 'rake'
 
+gem 'puma'
+# gem 'thin'
+
 gem 'sinatra'
 # gem 'redis'
 gem 'sass'
 gem 'rb-fsevent'
-gem 'thin'
 gem 'foreman'
 gem 'simplecov', :require => false, :group => :test
 gem 'rubocop'

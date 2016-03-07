@@ -52,6 +52,7 @@ GEM
     parser (2.3.0.6)
       ast (~> 2.2)
     powerpack (0.1.1)
+    puma (3.1.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -124,6 +125,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   foreman
+  puma
   rack-test
   rake
   rb-fsevent
@@ -134,7 +136,6 @@ DEPENDENCIES
   sass
   simplecov
   sinatra
-  thin
 
 BUNDLED WITH
    1.11.2
