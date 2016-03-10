@@ -5,8 +5,8 @@ require './lib/randomtext'
 
 # Do this later after Heroku and caching is
 # figured out. These get added to config.ru
-#require 'sass/plugin/rack'
-#use Sass::Plugin::Rack
+# require 'sass/plugin/rack'
+# use Sass::Plugin::Rack
 
 helpers do
   include Rack::Utils
@@ -38,17 +38,16 @@ get '/' do
   end
 end
 
-
 post '/' do
   @random = RandomText.new()
 
-  if params[:type] == 'Lorem'
-    @block = @random.lorem_passage
-  elsif params[:type] == 'ASDF'
-    @block = @random.passage
-  else
-    @block = @random.passage
-  end
+  @block = if params[:type] == 'Lorem'
+             @random.lorem_passage
+           elsif params[:type] == 'ASDF'
+             @random.passage
+           else
+             @random.passage
+           end
 
   erb :index
 end

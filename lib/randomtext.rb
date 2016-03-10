@@ -1,12 +1,11 @@
 
 class RandomText
-
   def initialize
     @prng = Random.new()
   end
 
   def letter
-    letters = %w{a s d f g h j k l}
+    letters = %w(a s d f g h j k l)
     letters[@prng.rand(0..8)]
   end
 
@@ -20,7 +19,7 @@ class RandomText
   end
 
   def sentence
-    #length = @prng.rand(5..10)
+    # length = @prng.rand(5..10)
     length = @prng.rand(1..10)
     sentence = word.capitalize
     length.times do
@@ -46,13 +45,13 @@ class RandomText
     end
     passage
   end
-  alias_method :asdf_passage, :passage
+  alias asdf_passage passage
 
   def lorem_words
-    lorem_words = %w{ Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis }
+    lorem_words = %w( Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis )
     lorem_words[@prng.rand(0..24)]
-    #puts "lorem words"
-    #puts lorem_words
+    # puts "lorem words"
+    # puts lorem_words
   end
 
   def lorem_sentence
@@ -80,7 +79,7 @@ class RandomText
       lorem_passage += lorem_paragraph
     end
     lorem_passage
-    #puts lorem_passage
+    # puts lorem_passage
   end
 
   def self.rt
@@ -89,7 +88,7 @@ class RandomText
 
   def self.mt
     @nl = 5
-    o =  [('a'..'z')].map(&:to_a).flatten;
-    string  =  (0..@nl-1).map { o[rand(o.length)]  }.join;
+    o = [('a'..'z')].map(&:to_a).flatten
+    string = (0..@nl - 1).map { o[rand(o.length)] }.join
   end
 end

@@ -10,7 +10,7 @@ gem 'sinatra'
 gem 'sass'
 gem 'rb-fsevent'
 gem 'foreman'
-gem 'simplecov', :require => false, :group => :test
+gem 'simplecov', require: false, group: :test
 gem 'rubocop'
 
 group :test do
@@ -18,5 +18,5 @@ group :test do
   gem 'capybara'
   gem 'rest-assured'
   gem 'rspec-http'
-  gem 'rack-test', :require => 'rack/test'
+  gem 'rack-test', require: 'rack/test'
 end

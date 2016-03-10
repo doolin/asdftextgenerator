@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe 'Sinatra App' do
-
   it 'to respond to GET' do
     get '/'
     expect(last_response).to be_ok
@@ -33,12 +32,11 @@ describe 'Sinatra App' do
   end
 end
 
-describe 'Requests', :type => :request do
-
+describe 'Requests', type: :request do
   it 'to generate asdf text with button click' do
     visit '/'
     click_button 'ASDF'
-    #page.has_text?('ASDF-FOO')
+    # page.has_text?('ASDF-FOO')
     page.has_content? 'ASDF'
   end
 
@@ -48,7 +46,6 @@ describe 'Requests', :type => :request do
     page.has_content? 'Lorem'
   end
 end
-
 
 describe RandomText do
   before do
@@ -60,7 +57,7 @@ describe RandomText do
   end
 
   it 'to generate a letter on the asdf row' do
-    letters = %w{a s d f g h j k l}
+    letters = %w(a s d f g h j k l)
     expect(letters.include?(@rt.letter)).to eq(true)
   end
 
