@@ -7,26 +7,8 @@
 # versions of RuboCop, may require this file to be generated again.
 
 # Offense count: 1
-Lint/UselessAssignment:
-  Exclude:
-    - 'lib/randomtext.rb'
-
-# Offense count: 1
-# Configuration parameters: AllowHeredoc, AllowURI, URISchemes.
-# URISchemes: http, https
-Metrics/LineLength:
-  Max: 174
-
-# Offense count: 1
 Style/Documentation:
   Exclude:
     - 'spec/**/*'
     - 'test/**/*'
-    - 'lib/randomtext.rb'
-
-# Offense count: 5
-# Cop supports --auto-correct.
-Style/MethodCallParentheses:
-  Exclude:
-    - 'asdf.rb'
     - 'lib/randomtext.rb'

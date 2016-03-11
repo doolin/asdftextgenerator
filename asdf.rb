@@ -14,17 +14,17 @@ helpers do
 end
 
 get '/lorem' do
-  @random = RandomText.new()
+  @random = RandomText.new
   { 'lorem' => @random.lorem_passage }.to_json
 end
 
 get '/asdf' do
-  @random = RandomText.new()
+  @random = RandomText.new
   { 'asdf' => @random.asdf_passage }.to_json
 end
 
 get '/' do
-  @random = RandomText.new()
+  @random = RandomText.new
 
   content_type :json
   if params[:type] == 'Lorem'
@@ -39,7 +39,7 @@ get '/' do
 end
 
 post '/' do
-  @random = RandomText.new()
+  @random = RandomText.new
 
   @block = if params[:type] == 'Lorem'
              @random.lorem_passage
