@@ -1,4 +1,5 @@
 
+# frozen_string_literal: true
 class RandomText
   def initialize
     @prng = Random.new
