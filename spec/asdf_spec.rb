@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'spec_helper'
 
 describe 'Sinatra App' do
@@ -58,7 +59,7 @@ describe RandomText do
   end
 
   it 'to generate a letter on the asdf row' do
-    letters = %w(a s d f g h j k l)
+    letters = %w[a s d f g h j k l]
     expect(letters.include?(@rt.letter)).to eq(true)
   end
 

@@ -12,3 +12,10 @@ Style/Documentation:
     - 'spec/**/*'
     - 'test/**/*'
     - 'lib/randomtext.rb'
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'

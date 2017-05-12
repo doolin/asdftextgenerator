@@ -1,12 +1,13 @@
 
 # frozen_string_literal: true
+
 class RandomText
   def initialize
     @prng = Random.new
   end
 
   def letter
-    letters = %w(a s d f g h j k l)
+    letters = %w[a s d f g h j k l]
     letters[@prng.rand(0..8)]
   end
 
@@ -49,11 +50,11 @@ class RandomText
   alias asdf_passage passage
 
   def lorem_words
-    lorem_words = %w(
+    lorem_words = %w[
       Lorem ipsum dolor sit amet consectetur adipisicing
       elit sed do eiusmod tempor incididunt ut labore et
       dolore magna aliqua Ut enim ad minim veniam quis
-    )
+    ]
     lorem_words[@prng.rand(0..24)]
     # puts "lorem words"
     # puts lorem_words
