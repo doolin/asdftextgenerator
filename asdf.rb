@@ -15,9 +15,13 @@ helpers do
   alias_method :h, :escape_html
 end
 
-get '/lorem' do
+def lorem_query
   @random = RandomText.new
   { 'lorem' => @random.lorem_passage }.to_json
+end
+
+get '/lorem' do
+  lorem_query
 end
 
 get '/asdf' do
